@@ -1,0 +1,37 @@
+skinparam DefaultFontName "Neucha"
+skinparam BackgroundColor transparent
+skinparam Shadowing false
+skinparam Handwritten true
+
+skinparam Note {
+    BorderColor                 #303030
+    BackgroundColor             #CEEEFE
+    FontSize                    12
+}
+
+skinparam Sequence {
+    TitleFontSize               12
+    TitleFontColor              #606060
+    ArrowColor                  #303030
+    DividerBackgroundColor      #EEEEEE
+    GroupBackgroundColor        #EEEEEE
+    LifeLineBackgroundColor     white
+    LifeLineBorderColor         #303030
+    ParticipantBackgroundColor  #FEFEFE
+    ParticipantBorderColor      #303030
+    BoxLineColor                #303030
+    BoxBackgroundColor          #DDDDDD
+}
+
+skinparam Title {
+    FontSize                    12
+    FontColor                   #606060
+}
+
+skinparam Activity {
+    ArrowColor                  #303030
+    ArrowFontSize               10
+    BarColor                    #F0A0A0
+    BorderColor                 #303030
+    BackgroundColor             #DEEEFE
+}
