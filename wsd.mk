@@ -5,6 +5,8 @@ STYLE ?= style.isvg
 
 .PHONY: all clean toolset force
 
+validate = test -s $@ || { rm $@; exit 1; }
+
 all: $(TARGETS)
 
 clean:
@@ -16,16 +18,14 @@ clean:
 	| xmllint --format - \
 	| sed -e "/<g>/r $(STYLE)" \
 	> $@
-	@$(MAKE) FILENAME=$@ validate
+	$(validate)
 
 %.png: %.wsd
 	$(MAKE) $*.svg
 	mogrify -antialias -density 240 -format png $*.svg
 	rm -vf $*.svg
-	@$(MAKE) FILENAME=$@ validate
+	$(validate)
 
-validate:
-	test -s $(FILENAME) || { rm $(FILENAME); exit 1; }
 
 install-toolset: plantuml.tool xmllint.tool mogrify.tool
 %.tool: force

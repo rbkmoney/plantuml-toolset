@@ -1,0 +1,19 @@
+@startuml
+!include "skin.iwsd"
+
+title The Meaningless Coversation
+
+hide footbox
+
+Alice -> Bob: Authentication Request
+...
+Bob --> Alice: Authentication Response
+    activate Alice
+    note right of Alice
+        Drink that potion!
+    end note
+    deactivate Alice
+... 5 minutes later ...
+Bob --> Alice: Bye!
+
+@enduml
