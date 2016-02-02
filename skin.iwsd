@@ -35,3 +35,13 @@ skinparam Activity {
     BorderColor                 #303030
     BackgroundColor             #DEEEFE
 }
+
+skinparam state {
+    StartColor                   #303030
+    EndColor                     #303030
+    BackgroundColor              #FEFEFE
+    BackgroundColor<<Failure>>   #FEA0A0
+    BackgroundColor<<Success>>   #A0FEA0
+    BorderColor                  #303030
+    ArrowColor                   #606060
+}
