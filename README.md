@@ -4,7 +4,7 @@ A couple of helpful shortcuts to generate `svg` or `png` images out of [plantuml
 
 See it yourself:
 
-<img src="examples/conversation.png" width="60%" />
+<img src="examples/conversation.png" width="40%" />
 
 ## Using
 
