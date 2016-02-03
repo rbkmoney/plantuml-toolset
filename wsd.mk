@@ -22,18 +22,21 @@ clean:
 
 %.png: %.wsd
 	$(MAKE) $*.svg
-	mogrify -antialias -density 240 -format png $*.svg
+	svgexport $*.svg $@ 2x && pngcrush -ow $@
 	rm -vf $*.svg
 	$(validate)
 
 
-install-toolset: plantuml.tool xmllint.tool mogrify.tool
+install-toolset: plantuml.tool xmllint.tool svgexport.tool pngcrush.tool
 %.tool: force
 	$(MAKE) $*.tool.$(uname -s)
 plantuml.tool.Darwin:
 	brew install plantuml
-mogrify.tool.Darwin:
-	brew install imagemagick
+svgexport.tool.Darwin:
+	brew install npm
+	npm install -g svgexport
+pngcrush.tool.Darwin:
+	brew install pngcrush
 xmllint.tool.Darwin:
 	true
 
