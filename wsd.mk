@@ -1,9 +1,9 @@
 FORMAT ?= svg
-SOURCES = $(wildcard ./*.wsd)
-TARGETS = $(patsubst %.wsd,%.$(FORMAT),$(SOURCES))
+SOURCES = $(wildcard *.wsd **/*.wsd)
+TARGETS = $(foreach fmt, $(FORMAT), $(patsubst %.wsd,%.$(fmt),$(SOURCES)))
 STYLE ?= style.isvg
 
-.PHONY: all clean toolset force
+.PHONY: all clean install-toolset force
 
 validate = test -s $@ || { rm $@; exit 1; }
 

@@ -18,11 +18,14 @@ include plantuml-toolset/wsd.mk
 After that you can invoke it in a number of ways:
 
 ```shell
-# Find all *.wsd in the current directory and make svg's out of them
+# Find all *.wsd in the current directory recursively and make svg's out of them
 $ make
 
 # Same but make png's
 $ make FORMAT=png
+
+# Same but make both png's and svg's
+$ make FORMAT="png svg"
 
 # Make examples/conversation.png
 $ make FORMAT=png examples/conversation.wsd
