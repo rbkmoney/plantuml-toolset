@@ -29,7 +29,7 @@ clean:
 
 install-toolset: plantuml.tool xmllint.tool svgexport.tool pngcrush.tool
 %.tool: force
-	$(MAKE) $*.tool.$(uname -s)
+	$(MAKE) $*.tool.$$(uname -s)
 plantuml.tool.Darwin:
 	brew install plantuml
 svgexport.tool.Darwin:
