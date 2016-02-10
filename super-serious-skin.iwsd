@@ -44,4 +44,5 @@ skinparam state {
     BackgroundColor<<Success>>   #A0FEA0
     BorderColor                  #303030
     ArrowColor                   #606060
+    FontStyle                    bold
 }
