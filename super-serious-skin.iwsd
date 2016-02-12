@@ -36,7 +36,7 @@ skinparam Activity {
     BackgroundColor             #DEEEFE
 }
 
-skinparam state {
+skinparam State {
     StartColor                   #303030
     EndColor                     #303030
     BackgroundColor              #FEFEFE
@@ -45,4 +45,15 @@ skinparam state {
     BorderColor                  #303030
     ArrowColor                   #606060
     FontStyle                    bold
+}
+
+skinparam Object {
+    BackgroundColor              #FEFEFE
+    BorderColor                  #303030
+    FontStyle                    bold
+    FontSize                     14
+}
+
+skinparam Package {
+    BorderThickness              1
 }
