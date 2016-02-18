@@ -1,5 +1,5 @@
 FORMAT ?= svg
-SOURCES = $(wildcard *.wsd **/*.wsd)
+SOURCES = $(shell find $(CURDIR) -type f -name '*.wsd')
 TARGETS = $(foreach fmt, $(FORMAT), $(patsubst %.wsd,%.$(fmt),$(SOURCES)))
 STYLE ?= style.isvg
 
